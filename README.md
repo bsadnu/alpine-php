@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/bsadnu/alpine-php.svg?branch=master)](https://travis-ci.org/bsadnu/alpine-php) ![Docker Pulls](https://img.shields.io/docker/pulls/bsadnu/alpine-php.svg?style=flat-square)
 
-Minimal PHP Docker images based on Alpine. Contains **tags** for development environments and adapted for various frameworks like [Symfony](http://symfony.com/) and [Wordpress](https://github.com/WordPress/WordPress).
+Minimal PHP Docker images based on Alpine. Contains **tags** for development environments and adapted for various frameworks like [Symfony](http://symfony.com/).
 
 ## Documentation
 
@@ -50,4 +50,3 @@ Dev images extend the standard ones and add some tools for development and CI li
 | 5.6-wp     |    5.6     | + upload-volume                                                                   | [![](https://images.microbadger.com/badges/image/bsadnu/alpine-php:5.6-wp.svg)](https://microbadger.com/images/bsadnu/alpine-php:5.6-wp "Get your own image badge on microbadger.com")
 | 5.6-dev    |    5.6     | + SSH server, xdebug, ant, composer                                               | [![](https://images.microbadger.com/badges/image/bsadnu/alpine-php:5.6-dev.svg)](https://microbadger.com/images/bsadnu/alpine-php:5.6-dev "Get your own image badge on microbadger.com")
 | 5.6-dev-sf |   5.6-dev  | + [Symfony aliases](https://github.com/bsadnu/alpine-php/blob/symfony/README.md) | [![](https://images.microbadger.com/badges/image/bsadnu/alpine-php:5.6-dev-sf.svg)](https://microbadger.com/images/bsadnu/alpine-php:5.6-dev-sf "Get your own image badge on microbadger.com")
-| 5.6-dev-wp |  5.6-dev   | + wp-cli, wp-autocompletion                                                       | [![](https://images.microbadger.com/badges/image/bsadnu/alpine-php:5.6-dev-wp.svg)](https://microbadger.com/images/bsadnu/alpine-php:5.6-dev-wp "Get your own image badge on microbadger.com")
