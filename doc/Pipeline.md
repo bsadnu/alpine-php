@@ -1,13 +1,13 @@
 # Production artifact pipeline
 
-This pipeline its just an example, for a more accurate approach see [here](https://github.com/jorge07/ddd-playground)
+This pipeline its just an example, for a more accurate approach see [here](https://github.com/bsadnu/ddd-playground)
 
 ### Using Multi stage build
 
 **Dockerfile.build**
 
 ```Dockerfile
-FROM jorge07/alpine-php:7.1-dev-sf as builder
+FROM bsadnu/alpine-php:7.1-dev-sf as builder
 
 WORKDIR /api
 
@@ -29,7 +29,7 @@ RUN composer run-script post-install-cmd \
     && rm -rf /api/web/app_dev.php \
     && rm -rf /api/web/config.php
 
-FROM jorge07/alpine-php:7.1
+FROM bsadnu/alpine-php:7.1
 
 ENV SYMFONY_ENV prod
 
