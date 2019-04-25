@@ -30,6 +30,7 @@ RUN apk --update add ca-certificates \
     php-mysqlnd@cast \
     php-pdo_mysql@cast \
     php-pdo_pgsql@cast \
+    php-mongodb@cast \
     php-phar@cast \
     php-posix@cast \
     php-session@cast \
@@ -44,16 +45,6 @@ RUN apk --update add ca-certificates \
 	# Clean up
     && ln -s /usr/bin/php7 /usr/bin/php \
     && rm -rf /var/cache/apk/*
-
-RUN \
-    apk add --no-cache --virtual .mongodb-ext-build-deps openssl-dev pcre-dev
-
-RUN \
-    pecl install mongodb && \
-    apk del .mongodb-ext-build-deps && \
-    pecl clear-cache && \
-    docker-php-ext-enable mongodb && \
-    docker-php-source delete
 
 ADD rootfs /
 
