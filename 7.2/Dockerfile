@@ -45,7 +45,7 @@ RUN apk --update add ca-certificates \
     && ln -s /usr/bin/php7 /usr/bin/php \
     && rm -rf /var/cache/apk/*
     
-RUN apk add -y autoconf pkg-config libssl-dev
+RUN apk add autoconf pkg-config libssl-dev
 RUN pecl install mongodb-1.2.2
 RUN echo "extension=mongodb.so" >> /usr/local/etc/php/conf.d/mongodb.ini
 
