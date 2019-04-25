@@ -30,7 +30,6 @@ RUN apk --update add ca-certificates \
     php-mysqlnd@cast \
     php-pdo_mysql@cast \
     php-pdo_pgsql@cast \
-    php-mongodb@cast \
     php-phar@cast \
     php-posix@cast \
     php-session@cast \
