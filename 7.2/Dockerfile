@@ -4,6 +4,9 @@ LABEL maintainer="Stas Bannikov <sab.ukraine@gmail.com>"
 
 ADD https://php.codecasts.rocks/php-alpine.rsa.pub /etc/apk/keys/php-alpine.rsa.pub
 
+RUN pecl install mongodb-1.2.2
+RUN echo "extension=mongodb.so" >> /usr/local/etc/php/conf.d/mongodb.ini
+
 RUN apk --update add ca-certificates \
     && echo "@edge-main http://dl-cdn.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories \
     && echo "@edge-community http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories \
@@ -44,9 +47,6 @@ RUN apk --update add ca-certificates \
 	# Clean up
     && ln -s /usr/bin/php7 /usr/bin/php \
     && rm -rf /var/cache/apk/*
-    
-RUN pecl install mongodb-1.2.2
-RUN echo "extension=mongodb.so" >> /usr/local/etc/php/conf.d/mongodb.ini
 
 ADD rootfs /
 
