@@ -15,7 +15,8 @@ RUN apk --update add ca-certificates \
     php-dev@cast \
     php-common@cast \
     php-apcu@cast \
-    php-bcmath@cast \
+    php-
+    @cast \
     php-ctype@cast \
     php-curl@cast \
     php-exif@cast \
@@ -30,7 +31,6 @@ RUN apk --update add ca-certificates \
     php-mysqlnd@cast \
     php-pdo_mysql@cast \
     php-pdo_pgsql@cast \
-    php-mongodb@cast \
     php-phar@cast \
     php-posix@cast \
     php-session@cast \
@@ -45,6 +45,11 @@ RUN apk --update add ca-certificates \
 	# Clean up
     && ln -s /usr/bin/php7 /usr/bin/php \
     && rm -rf /var/cache/apk/*
+    
+RUN apt-get update
+RUN apt-get install -y autoconf pkg-config libssl-dev
+RUN pecl install mongodb-1.2.2
+RUN echo "extension=mongodb.so" >> /usr/local/etc/php/conf.d/mongodb.ini
 
 ADD rootfs /
 
