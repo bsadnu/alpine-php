@@ -46,6 +46,16 @@ RUN apk --update add ca-certificates \
     && ln -s /usr/bin/php7 /usr/bin/php \
     && rm -rf /var/cache/apk/*
 
+RUN \
+    apk add --no-cache --virtual .mongodb-ext-build-deps openssl-dev pcre-dev
+
+RUN \
+    pecl install mongodb && \
+    apk del .mongodb-ext-build-deps && \
+    pecl clear-cache && \
+    docker-php-ext-enable mongodb && \
+    docker-php-source delete
+
 ADD rootfs /
 
 ENTRYPOINT ["/sbin/tini", "--"]
