@@ -27,12 +27,12 @@ docker run -d --name dev -p 9000:9000 -p 2323:22 -v $PWD:/app bsadnu/alpine-php:
 
 Dev images extend the standard ones and add some tools for development and CI like, composer, xdebug, etc...
 
-| General purpose     | Symfony     | Wordpress                                                                   
-|---------------------|-------------|-------------------
+| General purpose     | Symfony     |                                                                
+|---------------------|-------------|
 | [7.3-dev](https://github.com/bsadnu/alpine-php/blob/master/7.3/Dockerfile.dev), [7.2-front](https://github.com/bsadnu/alpine-php/blob/master/7.3/Dockerfile.front) |  | 
-| [7.2-dev](https://github.com/bsadnu/alpine-php/blob/master/7.2/Dockerfile.dev), [7.2-front](https://github.com/bsadnu/alpine-php/blob/master/7.2/Dockerfile.front) | [7.2-dev-sf](https://github.com/bsadnu/alpine-php/blob/symfony/7.2/Dockerfile.dev), [7.2-front-sf](https://github.com/bsadnu/alpine-php/blob/symfony/7.2/Dockerfile.front) | [7.2-dev-wp](https://github.com/bsadnu/alpine-php/blob/wordpress/7.2/Dockerfile.dev)
-| [7.1-dev](https://github.com/bsadnu/alpine-php/blob/master/7.1/Dockerfile.dev), [7.1-front](https://github.com/bsadnu/alpine-php/blob/master/7.1/Dockerfile.front) | [7.1-dev-sf](https://github.com/bsadnu/alpine-php/blob/symfony/7.1/Dockerfile.dev), [7.1-front-sf](https://github.com/bsadnu/alpine-php/blob/symfony/7.1/Dockerfile.front) | [7.1-dev-wp](https://github.com/bsadnu/alpine-php/blob/wordpress/7.1/Dockerfile.dev)
-| [5.6-dev](https://github.com/bsadnu/alpine-php/blob/master/5.6/Dockerfile.dev) | [5.6-dev-sf](https://github.com/bsadnu/alpine-php/blob/symfony/5.6/Dockerfile.dev) | [5.6-dev-wp](https://github.com/bsadnu/alpine-php/blob/wordpress/5.6/Dockerfile.dev)
+| [7.2-dev](https://github.com/bsadnu/alpine-php/blob/master/7.2/Dockerfile.dev), [7.2-front](https://github.com/bsadnu/alpine-php/blob/master/7.2/Dockerfile.front) | [7.2-dev-sf](https://github.com/bsadnu/alpine-php/blob/symfony/7.2/Dockerfile.dev), [7.2-front-sf](https://github.com/bsadnu/alpine-php/blob/symfony/7.2/Dockerfile.front)
+| [7.1-dev](https://github.com/bsadnu/alpine-php/blob/master/7.1/Dockerfile.dev), [7.1-front](https://github.com/bsadnu/alpine-php/blob/master/7.1/Dockerfile.front) | [7.1-dev-sf](https://github.com/bsadnu/alpine-php/blob/symfony/7.1/Dockerfile.dev), [7.1-front-sf](https://github.com/bsadnu/alpine-php/blob/symfony/7.1/Dockerfile.front) 
+| [5.6-dev](https://github.com/bsadnu/alpine-php/blob/master/5.6/Dockerfile.dev) | [5.6-dev-sf](https://github.com/bsadnu/alpine-php/blob/symfony/5.6/Dockerfile.dev)
 
 ## Content table
 
