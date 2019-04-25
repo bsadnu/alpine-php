@@ -48,8 +48,6 @@ RUN apk --update add ca-certificates \
 
 ADD rootfs /
 
-RUN echo "extension=mongodb.so" >> /usr/local/etc/php/conf.d/mongodb.ini
-
 ENTRYPOINT ["/sbin/tini", "--"]
 
 CMD ["/usr/sbin/php-fpm7", "-R", "--nodaemonize"]
