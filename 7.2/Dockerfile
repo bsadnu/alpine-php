@@ -15,8 +15,7 @@ RUN apk --update add ca-certificates \
     php-dev@cast \
     php-common@cast \
     php-apcu@cast \
-    php-
-    @cast \
+    php-bcmath@cast \
     php-ctype@cast \
     php-curl@cast \
     php-exif@cast \
