@@ -26,8 +26,6 @@ RUN apk add -U --no-cache \
     && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer --version=${COMPOSER_VERSION} \
     && composer global require "hirak/prestissimo:0.3.7"
 
-RUN docker-php-ext-install sockets
-
 ADD devfs /
 
 RUN HOST_IP="$(/sbin/ip route|awk '/default/ { print $3 }')" \
