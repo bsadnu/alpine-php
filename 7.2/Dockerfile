@@ -42,6 +42,8 @@ RUN apk --update add ca-certificates \
     php-redis@cast \
     php-fpm@cast \
     php-sodium@cast \
+    php-sockets@cast \
+    php-amqp@cast \
 	# Clean up
     && ln -s /usr/bin/php7 /usr/bin/php \
     && rm -rf /var/cache/apk/*
