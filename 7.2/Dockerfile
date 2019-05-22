@@ -44,6 +44,7 @@ RUN apk --update add ca-certificates \
     php-sodium@cast \
     php-sockets@cast \
     php-amqp@cast \
+    php-ds@cast \
 	# Clean up
     && ln -s /usr/bin/php7 /usr/bin/php \
     && rm -rf /var/cache/apk/*
